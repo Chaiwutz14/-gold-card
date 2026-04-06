@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สิทธิประโยชน์ - สิทธิบัตรทอง</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><i class="fas fa-heart-pulse"></i> <span>ThaiHealth Card</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="benefits.html" class="active">สิทธิประโยชน์</a></li>
+                <li><a href="check-status.html">เช็กสิทธิ/ย้ายหน่วยบริการ</a></li>
+                <li><a href="video.html">วิดีโอแนะนำ</a></li>
+                <li><a href="about.html">ประวัติผู้จัดทำ</a></li>
+            </ul>
+             <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container content-padding">
+        <h2 class="section-title">สิทธิบัตรทองครอบคลุมการรักษาอะไรบ้าง?</h2>
+        
+        <div class="benefit-group">
+            <h3 class="group-title"><i class="fas fa-user-md"></i> 1. การรักษาพยาบาลทั่วไป</h3>
+            <div class="benefits-grid">
+                <div class="benefit-item bg-blue">
+                    <i class="fas fa-pills"></i>
+                    <h4>เจ็บป่วยเล็กน้อย 32 อาการ</h4>
+                    <p>รับยาฟรีที่ร้านยาคุณภาพ (ปวดหัว, ปวดข้อ, ปวดฟัน ฯลฯ) ไม่ต้องไปโรงพยาบาล</p>
+                </div>
+                <div class="benefit-item bg-blue">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>พบแพทย์ออนไลน์ (Telemedicine)</h4>
+                    <p>ครอบคลุม 42 กลุ่มโรค ผ่านแอปฯ หมอดี, Clicknic, Saluber MD และ Totale Telemed</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefit-group" style="margin-top: 50px;">
+            <h3 class="group-title"><i class="fas fa-hospital-symbol"></i> 2. การรักษาโรคเรื้อรังและค่าใช้จ่ายสูง</h3>
+            <div class="benefits-grid">
+                <div class="benefit-item bg-gold">
+                    <i class="fas fa-ribbon"></i>
+                    <h4>โรคมะเร็ง (Cancer Anywhere)</h4>
+                    <p>รักษาได้ทุกที่ที่พร้อม ไม่ต้องใช้ใบส่งตัว ครอบคลุมเคมีบำบัดและรังสีรักษา</p>
+                </div>
+                <div class="benefit-item bg-gold">
+                    <i class="fas fa-biohazard"></i>
+                    <h4>โรคไตเรื้อรัง</h4>
+                    <p>ครอบคลุมการล้างไตทางช่องท้อง การฟอกไตด้วยเครื่อง และการปลูกถ่ายไต</p>
+                </div>
+                <div class="benefit-item bg-gold">
+                    <i class="fas fa-brain"></i>
+                    <h4>หลอดเลือดสมองและหัวใจ</h4>
+                    <p>ระบบช่องทางเร่งด่วน (Fast Track) เพื่อลดภาวะอัมพฤกษ์ อัมพาต</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="emergency-box">
+            <h3 style="color: #e53e3e;"><i class="fas fa-ambulance"></i> 3. กรณีเจ็บป่วยฉุกเฉิน (UCEP)</h3>
+            <div class="emergency-grid">
+                <div class="emergency-item">
+                    <strong>🔴 ฉุกเฉินวิกฤต:</strong>
+                    <p>เข้าโรงพยาบาลที่ใกล้ที่สุดได้ทุกแห่ง (รวมเอกชน) ฟรีจนพ้นวิกฤต 72 ชม.</p>
+                </div>
+                <div class="emergency-item">
+                    <strong>🟡 ฉุกเฉินไม่วิกฤต:</strong>
+                    <p>เข้ารักษาได้ที่โรงพยาบาลรัฐที่ใกล้ที่สุด ไม่จำกัดจำนวนครั้ง</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="benefit-group" style="margin-top: 50px;">
+            <h3 class="group-title"><i class="fas fa-apple-alt"></i> 4. บริการส่งเสริมสุขภาพและป้องกันโรค</h3>
+            <div class="benefits-grid">
+                <div class="benefit-item bg-green">
+                    <i class="fas fa-shield-virus"></i>
+                    <h4>การป้องกันและวัคซีน</h4>
+                    <p>ฉีดวัคซีนไข้หวัดใหญ่ และตรวจคัดกรองมะเร็งต่างๆ ฟรี</p>
+                </div>
+                <div class="benefit-item bg-purple">
+                    <i class="fas fa-baby-carriage"></i>
+                    <h4>แม่และเด็ก / สุขภาพจิต</h4>
+                    <p>ฝากครรภ์ฟรี และรับคำปรึกษาปัญหาสุขภาพจิตได้ทุกกรณี</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>สิทธิบัตรทอง (หลักประกันสุขภาพแห่งชาติ)</h4>
+                <p>พัฒนาและดูแลระบบโดย <strong>ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเมืองพัทลุง</strong></p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 All Rights Reserved. เว็บไซต์นี้เป็นสื่อกลางการให้ข้อมูลเบื้องต้นเท่านั้น</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
