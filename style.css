@@ -241,6 +241,8 @@ strong { font-weight: 600; color: var(--ink); }
 .main-nav .nav-cta { display: none; }
 .nav-toggle {
     display: none;
+    position: relative;
+    z-index: 1001; /* keep the toggle (and its close icon) above the open drawer */
     width: 46px; height: 46px;
     align-items: center; justify-content: center;
     border: 1px solid var(--line);
