@@ -3,119 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>สิทธิบัตรทอง - หลักประกันสุขภาพแห่งชาติ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>สิทธิบัตรทอง 30 บาท | หลักประกันสุขภาพแห่งชาติ – รักษาฟรี ครอบคลุมทุกคน</title>
+    <meta name="description" content="เว็บไซต์ให้ความรู้สิทธิบัตรทอง (หลักประกันสุขภาพแห่งชาติ / สิทธิ 30 บาทรักษาทุกที่) ครบทุกด้าน: สิทธิประโยชน์ การใช้สิทธิ เช็กสิทธิ ย้ายหน่วยบริการ ช่องทางติดต่อ สปสช. และดาวน์โหลดแอปฯ">
+    <meta name="theme-color" content="#0d5a4a">
+    <link rel="preload" href="assets/fonts/sarabun-400-thai.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+    <div class="nav-backdrop"></div>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <i class="fas fa-heart-pulse"></i> <span>สิทธิบัตรทอง</span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">หน้าแรก</a></li>
-                <li><a href="benefits.html">สิทธิประโยชน์</a></li>
-                <li><a href="check-status.html">เช็กสิทธิ/ย้ายหน่วยบริการ</a></li>
-                <li><a href="video.html">วิดีโอแนะนำ</a></li>
-                <li><a href="about.html">ประวัติผู้จัดทำ</a></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="บัตรทอง หน้าแรก">
+                <span class="brand-mark"><svg class="ic"><use href="#i-shield-heart"></use></svg></span>
+                <span class="brand-text"><strong>บัตรทอง</strong><small>หลักประกันสุขภาพแห่งชาติ</small></span>
+            </a>
+            <nav class="main-nav" aria-label="เมนูหลัก">
+                <ul>
+                    <li><a href="index.html" class="active">หน้าแรก</a></li>
+                    <li><a href="benefits.html">สิทธิประโยชน์</a></li>
+                    <li><a href="how-to.html">การใช้สิทธิ</a></li>
+                    <li><a href="register.html">เช็ก/ย้ายสิทธิ</a></li>
+                    <li><a href="faq.html">คำถามที่พบบ่อย</a></li>
+                    <li><a href="video.html">วิดีโอ</a></li>
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                    <li><a href="about.html">ผู้จัดทำ</a></li>
+                    <li class="nav-cta"><a class="btn btn-gold" href="tel:1330"><svg class="ic"><use href="#i-headset"></use></svg> สายด่วน 1330</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn-gold header-cta" href="tel:1330"><svg class="ic"><use href="#i-headset"></use></svg> สายด่วน 1330</a>
+            <button class="nav-toggle" aria-label="เปิด/ปิดเมนู" aria-expanded="false">
+                <svg class="ic ic-menu"><use href="#i-menu"></use></svg>
+                <svg class="ic ic-close"><use href="#i-close"></use></svg>
+            </button>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>สิทธิบัตรทอง: สวัสดิการเพื่อคนไทย</h1>
-            <p>เข้าถึงการรักษาพยาบาลที่มีมาตรฐาน อย่างเท่าเทียม และทั่วถึง</p>
-            <a href="check-status.html" class="cta-button">เช็กสิทธิของคุณที่นี่</a>
-        </div>
-    </section>
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div>
+                    <span class="hero-badge"><svg class="ic"><use href="#i-sparkle"></use></svg> สวัสดิการสุขภาพของคนไทยทุกคน</span>
+                    <h1>สิทธิบัตรทอง <span class="accent">รักษาฟรี</span><br>ดูแลสุขภาพคนไทย อย่างเท่าเทียม</h1>
+                    <p class="hero-lead">หลักประกันสุขภาพแห่งชาติ หรือ “สิทธิ 30 บาทรักษาทุกที่” ครอบคลุมการรักษาตั้งแต่โรคทั่วไปจนถึงโรคค่าใช้จ่ายสูง เพียงใช้บัตรประชาชนใบเดียว</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-gold btn-lg" href="register.html"><svg class="ic"><use href="#i-id-card"></use></svg> เช็กสิทธิของฉัน</a>
+                        <a class="btn btn-light btn-lg" href="benefits.html"><svg class="ic"><use href="#i-shield-heart"></use></svg> ดูสิทธิประโยชน์</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span><svg class="ic"><use href="#i-check-circle"></use></svg> ครอบคลุมคนไทยกว่า 47 ล้านคน</span>
+                        <span><svg class="ic"><use href="#i-check-circle"></use></svg> ใช้บัตรประชาชนใบเดียว</span>
+                    </div>
+                </div>
+                <aside class="hero-card" aria-label="สิ่งที่ได้จากบัตรทอง">
+                    <h3><svg class="ic"><use href="#i-hand-heart"></use></svg> บัตรทองให้อะไรบ้าง</h3>
+                    <ul class="card-list">
+                        <li><svg class="ic"><use href="#i-check"></use></svg> ตรวจ–รักษา–รับยา ตามบัญชียาหลัก โดยไม่เสียค่าใช้จ่าย</li>
+                        <li><svg class="ic"><use href="#i-check"></use></svg> ผ่าตัด นอนโรงพยาบาล และโรคเรื้อรังค่าใช้จ่ายสูง</li>
+                        <li><svg class="ic"><use href="#i-check"></use></svg> ฉุกเฉินวิกฤต เข้าโรงพยาบาลใกล้ที่สุดได้ทุกแห่ง</li>
+                        <li><svg class="ic"><use href="#i-check"></use></svg> ตรวจคัดกรอง–วัคซีน–ฝากครรภ์ ครอบคลุมทุกคน</li>
+                    </ul>
+                    <p class="card-note">เพียงยื่นบัตรประชาชน ณ หน่วยบริการที่ลงทะเบียนไว้ ก็เริ่มใช้สิทธิได้ทันที</p>
+                </aside>
+            </div>
+        </section>
 
-    <section class="info-section content-padding">
+        <!-- STATS -->
+        <section class="section-tight">
+            <div class="container">
+                <div class="stats reveal">
+                    <div class="stat"><b>0 ฿</b><span>ค่ารักษาตามสิทธิ</span></div>
+                    <div class="stat"><b>47 ล้าน</b><span>คนไทยที่ได้รับสิทธิ</span></div>
+                    <div class="stat"><b>1 ใบ</b><span>ใช้แค่บัตรประชาชน</span></div>
+                    <div class="stat"><b>1330</b><span>สายด่วนตลอด 24 ชม.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT IS -->
+        <section class="section bg-warm">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow"><svg class="ic"><use href="#i-info"></use></svg> ทำความรู้จัก</span>
+                    <h2>“บัตรทอง” คืออะไร?</h2>
+                    <p>คือ สิทธิหลักประกันสุขภาพแห่งชาติ ตาม พ.ร.บ.หลักประกันสุขภาพแห่งชาติ พ.ศ. 2545 ดูแลโดยสำนักงานหลักประกันสุขภาพแห่งชาติ (สปสช.) เพื่อให้คนไทยทุกคนเข้าถึงการรักษาที่จำเป็นได้ โดยไม่ต้องกังวลเรื่องค่าใช้จ่าย</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card reveal">
+                        <div class="card-icon i-teal"><svg class="ic"><use href="#i-users"></use></svg></div>
+                        <h3>ใครมีสิทธิบัตรทอง?</h3>
+                        <p>คนไทยที่มีเลขบัตรประชาชน 13 หลัก และ<strong>ไม่มี</strong>สิทธิรักษาพยาบาลอื่น เช่น สิทธิข้าราชการ หรือสิทธิประกันสังคม จะได้รับสิทธิบัตรทองโดยอัตโนมัติ</p>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-icon i-amber"><svg class="ic"><use href="#i-id-card"></use></svg></div>
+                        <h3>ใช้อะไรในการรับบริการ?</h3>
+                        <p>ใช้เพียง <strong>บัตรประชาชนใบเดียว</strong> ไม่ต้องมีบัตรพลาสติกหรือเอกสารเพิ่ม สำหรับเด็กเล็กใช้สูติบัตรพร้อมบัตรประชาชนผู้ปกครอง</p>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-icon i-green"><svg class="ic"><use href="#i-hand-heart"></use></svg></div>
+                        <h3>เสียค่าใช้จ่ายไหม?</h3>
+                        <p>การรักษาที่อยู่ในสิทธิ <strong>ไม่มีค่าใช้จ่าย</strong> รัฐเป็นผู้สนับสนุนงบประมาณเหมาจ่ายรายหัวให้กับหน่วยบริการที่ดูแลคุณ</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 30 BAHT POLICY -->
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow"><svg class="ic"><use href="#i-sparkle"></use></svg> นโยบายเด่น</span>
+                    <h2>“30 บาทรักษาทุกที่” สะดวกขึ้นกว่าเดิม</h2>
+                    <p>ยกระดับบริการด้วยเทคโนโลยีดิจิทัล ลดการรอคอย และให้คุณรับบริการใกล้บ้านได้มากขึ้น</p>
+                </div>
+                <div class="grid grid-4">
+                    <article class="card reveal">
+                        <div class="card-icon i-blue"><svg class="ic"><use href="#i-map-pin"></use></svg></div>
+                        <h3>รักษาข้ามหน่วยได้</h3>
+                        <p>เจ็บป่วยทั่วไป เข้าหน่วยบริการปฐมภูมิในเครือข่ายที่ไหนก็ได้ โดยไม่ต้องใช้ใบส่งตัว</p>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-icon i-green"><svg class="ic"><use href="#i-pill"></use></svg></div>
+                        <h3>รับยาที่ร้านยาใกล้บ้าน</h3>
+                        <p>อาการเจ็บป่วยเล็กน้อย ปรึกษาเภสัชกรและรับยาฟรีที่ร้านยาคุณภาพที่เข้าร่วมโครงการ</p>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-icon i-cyan"><svg class="ic"><use href="#i-laptop-medical"></use></svg></div>
+                        <h3>พบแพทย์ออนไลน์</h3>
+                        <p>ปรึกษาแพทย์ผ่านแอปฯ (Telemedicine) พร้อมบริการจัดส่งยาถึงบ้าน ไม่ต้องเดินทาง</p>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-icon i-amber"><svg class="ic"><use href="#i-flask"></use></svg></div>
+                        <h3>เจาะเลือด–แล็บใกล้บ้าน</h3>
+                        <p>ตรวจแล็บที่หน่วยบริการเทคนิคการแพทย์ที่ร่วมโครงการ ส่งผลกลับให้แพทย์ได้เลย</p>
+                    </article>
+                </div>
+                <div class="callout teal reveal" style="margin-top:34px">
+                    <svg class="ic"><use href="#i-info"></use></svg>
+                    <div>
+                        <h4>ใช้บัตรประชาชนใบเดียว</h4>
+                        <p>นโยบาย 30 บาทรักษาทุกที่ทยอยขยายครอบคลุมทั่วประเทศ แนะนำให้เช็กสิทธิและหน่วยบริการประจำของคุณก่อนเข้ารับบริการเสมอ ผ่านแอปฯ สปสช. หรือสายด่วน 1330</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW TO USE -->
+        <section class="section bg-warm">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow"><svg class="ic"><use href="#i-check-circle"></use></svg> ใช้ง่าย 3 ขั้นตอน</span>
+                    <h2>เริ่มใช้สิทธิบัตรทองอย่างไร</h2>
+                </div>
+                <div class="timeline">
+                    <div class="tl-item reveal">
+                        <div class="tl-num">1</div>
+                        <div>
+                            <h4>เช็กสิทธิและหน่วยบริการ</h4>
+                            <p>ตรวจสอบว่าคุณมีสิทธิบัตรทอง และหน่วยบริการประจำอยู่ที่ใด ผ่านแอปฯ สปสช. ไลน์ @nhso หรือสายด่วน 1330</p>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-num">2</div>
+                        <div>
+                            <h4>ยื่นบัตรประชาชน</h4>
+                            <p>ไปที่หน่วยบริการประจำ (หรือหน่วยปฐมภูมิในเครือข่ายตามนโยบายรักษาทุกที่) แล้วยื่นบัตรประชาชนใบเดียว</p>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-num">3</div>
+                        <div>
+                            <h4>เข้ารับการรักษา</h4>
+                            <p>รับการตรวจวินิจฉัยและรักษาตามขั้นตอน โดยไม่ต้องเสียค่าใช้จ่ายในส่วนที่สิทธิคุ้มครอง</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="center" style="margin-top:32px">
+                    <a class="btn btn-ghost" href="how-to.html">อ่านวิธีใช้สิทธิแบบละเอียด <svg class="ic"><use href="#i-arrow-right"></use></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK LINKS -->
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow"><svg class="ic"><use href="#i-book"></use></svg> ค้นหาข้อมูล</span>
+                    <h2>เลือกเรื่องที่คุณอยากรู้</h2>
+                </div>
+                <div class="grid grid-3">
+                    <a class="card reveal" href="benefits.html">
+                        <div class="card-icon i-teal"><svg class="ic"><use href="#i-shield-heart"></use></svg></div>
+                        <h3>สิทธิประโยชน์ทั้งหมด</h3>
+                        <p>ครอบคลุมโรคทั่วไป โรคเรื้อรัง มะเร็ง ไต หัวใจ ทันตกรรม แม่และเด็ก สุขภาพจิต และอื่น ๆ</p>
+                    </a>
+                    <a class="card reveal" href="how-to.html">
+                        <div class="card-icon i-blue"><svg class="ic"><use href="#i-map-pin"></use></svg></div>
+                        <h3>ใช้สิทธิที่ไหน–อย่างไร</h3>
+                        <p>สถานที่ใช้สิทธิ ขั้นตอน กรณีฉุกเฉิน UCEP และสิ่งที่บัตรทองไม่ครอบคลุม</p>
+                    </a>
+                    <a class="card reveal" href="register.html">
+                        <div class="card-icon i-amber"><svg class="ic"><use href="#i-id-card"></use></svg></div>
+                        <h3>เช็กสิทธิ / ย้ายหน่วยบริการ</h3>
+                        <p>ตรวจสอบสิทธิ ลงทะเบียน และเปลี่ยนหน่วยบริการด้วยตนเอง พร้อมเอกสารที่ต้องใช้</p>
+                    </a>
+                    <a class="card reveal" href="faq.html">
+                        <div class="card-icon i-violet"><svg class="ic"><use href="#i-chat"></use></svg></div>
+                        <h3>คำถามที่พบบ่อย</h3>
+                        <p>รวมคำถามยอดฮิต เช่น ย้ายที่อยู่ ต่างจังหวัด อุบัติเหตุ ตั้งครรภ์ และผู้สูงอายุ</p>
+                    </a>
+                    <a class="card reveal" href="video.html">
+                        <div class="card-icon i-rose"><svg class="ic"><use href="#i-play"></use></svg></div>
+                        <h3>วิดีโอให้ความรู้</h3>
+                        <p>คลิปสั้นเข้าใจง่าย อธิบายสิทธิและวิธีใช้บัตรทองสำหรับทุกวัย</p>
+                    </a>
+                    <a class="card reveal" href="contact.html">
+                        <div class="card-icon i-green"><svg class="ic"><use href="#i-headset"></use></svg></div>
+                        <h3>ติดต่อ &amp; ดาวน์โหลดแอป</h3>
+                        <p>สายด่วน 1330 ไลน์ @nhso และดาวน์โหลดแอปพลิเคชัน สปสช. อย่างเป็นทางการ</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section-tight">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2>มีคำถามเรื่องสิทธิการรักษา?</h2>
+                    <p>ปรึกษาเจ้าหน้าที่ สปสช. ได้ฟรี ตลอด 24 ชั่วโมง หรือแชทผ่านไลน์ทางการ พร้อมช่วยเหลือคุณทุกเรื่องบัตรทอง</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-gold btn-lg" href="tel:1330"><svg class="ic"><use href="#i-headset"></use></svg> โทร 1330 ฟรี</a>
+                        <a class="btn btn-line btn-lg" href="https://lin.ee/zzn3pU6" target="_blank" rel="noopener"><svg class="ic"><use href="#i-line"></use></svg> แชทไลน์ @nhso</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <h2 class="section-title">ทำไมต้องใช้สิทธิบัตรทอง?</h2>
-            <div class="info-cards">
-                <div class="card">
-                    <i class="fas fa-hand-holding-medical" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 15px; display: block;"></i>
-                    <h3>รักษาฟรี 0 บาท</h3>
-                    <p>ครอบคลุมการรักษาโรคทั่วไปและโรคร้ายแรง ค่าผ่าตัด ค่าเวชภัณฑ์ และยารักษาโรคตามบัญชียาหลัก</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark"><svg class="ic"><use href="#i-shield-heart"></use></svg></span>
+                        <span class="brand-text"><strong>บัตรทอง</strong><small>หลักประกันสุขภาพแห่งชาติ</small></span>
+                    </a>
+                    <p>เว็บไซต์ให้ความรู้เรื่องสิทธิบัตรทอง (สิทธิ 30 บาท) เพื่อให้ประชาชนทุกคนเข้าถึงและใช้สิทธิได้อย่างถูกต้อง ครบถ้วน โดยไม่มีค่าใช้จ่าย</p>
+                    <div class="footer-hotline"><svg class="ic"><use href="#i-headset"></use></svg> สายด่วน สปสช. <b>1330</b></div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-hospital-user" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 15px; display: block;"></i>
-                    <h3>ครอบคลุมทุกกลุ่มโรค</h3>
-                    <p>รวมถึงบริการทันตกรรม การฝากครรภ์ การฉีดวัคซีน และการตรวจคัดกรองมะเร็งฟรี</p>
+                <div class="footer-col">
+                    <h5>เมนูลัด</h5>
+                    <ul>
+                        <li><a href="benefits.html">สิทธิประโยชน์</a></li>
+                        <li><a href="how-to.html">การใช้สิทธิ</a></li>
+                        <li><a href="register.html">เช็ก / ย้ายสิทธิ</a></li>
+                        <li><a href="faq.html">คำถามที่พบบ่อย</a></li>
+                        <li><a href="video.html">วิดีโอให้ความรู้</a></li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <i class="fas fa-route" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 15px; display: block;"></i>
-                    <h3>ย้ายสิทธิได้ 4 ครั้ง/ปี</h3>
-                    <p>เปลี่ยนหน่วยบริการได้ง่ายๆ ผ่านแอปพลิเคชัน สปสช. หรือไลน์ และใช้สิทธิได้ทันทีที่ย้าย</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="new-policy" style="background-color: #f0f7ff; padding: 80px 0;">
-        <div class="container">
-            <h2 class="section-title">นโยบายใหม่ "30 บาทรักษาทุกที่"</h2>
-            <div class="info-cards">
-                <div class="benefit-item bg-blue">
-                    <h4 style="color: var(--primary-blue); margin-bottom: 10px;"><i class="fas fa-map-marker-alt"></i> รักษาได้ทุกที่</h4>
-                    <p>เจ็บป่วยทั่วไปเข้ารับการรักษาที่หน่วยบริการปฐมภูมิ (คลินิก/รพ.สต.) ที่ไหนก็ได้ในเครือข่าย สปสช. โดยไม่ต้องใช้ใบส่งตัว</p>
-                </div>
-                <div class="benefit-item bg-blue">
-                    <h4 style="color: var(--primary-blue); margin-bottom: 10px;"><i class="fas fa-pills"></i> รับยาใกล้บ้าน</h4>
-                    <p>ลดความแออัดในโรงพยาบาล สามารถเลือกรับยาที่ร้านยาใกล้บ้านที่เข้าร่วมโครงการ "ร้านยาคุณภาพของฉัน"</p>
-                </div>
-                <div class="benefit-item bg-blue">
-                    <h4 style="color: var(--primary-blue); margin-bottom: 10px;"><i class="fas fa-laptop-medical"></i> พบแพทย์ออนไลน์</h4>
-                    <p>บริการ Telemedicine สำหรับ 42 กลุ่มโรคพื้นฐาน ไม่ต้องเดินทางไปโรงพยาบาล ลดค่าใช้จ่ายและเวลาเดินทาง</p>
+                <div class="footer-col">
+                    <h5>ช่องทางราชการ</h5>
+                    <ul>
+                        <li><a href="tel:1330">สายด่วน สปสช. 1330</a></li>
+                        <li><a href="tel:1669">เจ็บป่วยฉุกเฉิน 1669</a></li>
+                        <li><a href="https://lin.ee/zzn3pU6" target="_blank" rel="noopener">ไลน์ @nhso</a></li>
+                        <li><a href="https://www.nhso.go.th" target="_blank" rel="noopener">เว็บไซต์ สปสช.</a></li>
+                        <li><a href="contact.html">ดาวน์โหลดแอปฯ สปสช.</a></li>
+                    </ul>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="benefits.html" class="cta-button" style="margin-top: 0; background-color: var(--primary-blue);">ดูสิทธิประโยชน์ทั้งหมด</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="steps-section content-padding">
-        <div class="container">
-            <h2 class="section-title">3 ขั้นตอนง่ายๆ ในการใช้สิทธิ</h2>
-            <div class="info-cards">
-                <div class="card">
-                    <div class="step-num">1</div>
-                    <h4>เช็กสิทธิ</h4>
-                    <p>ตรวจสอบสิทธิและหน่วยบริการประจำของคุณผ่านแอปฯ สปสช. หรือตู้คีออส</p>
-                </div>
-                <div class="card">
-                    <div class="step-num">2</div>
-                    <h4>แสดงบัตร</h4>
-                    <p>ยื่นบัตรประชาชนใบเดียว (หรือสูติบัตรสำหรับเด็ก) ณ หน่วยบริการที่ลงทะเบียนไว้</p>
-                </div>
-                <div class="card">
-                    <div class="step-num">3</div>
-                    <h4>รับการรักษา</h4>
-                    <p>เข้ารับการตรวจรักษาตามขั้นตอนโดยไม่ต้องเสียค่าใช้จ่ายในส่วนที่สิทธิคุ้มครอง</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-info">
-                <h4>สิทธิบัตรทอง (หลักประกันสุขภาพแห่งชาติ)</h4>
-                <p>พัฒนาโดย <strong>ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเมืองพัทลุง</strong></p>
-            </div>
+            <div class="footer-dev">พัฒนาโดย <strong>ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเมืองพัทลุง</strong></div>
             <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. ข้อมูลเพื่อการประชาสัมพันธ์เบื้องต้น</p>
+                <p>© 2026 เว็บไซต์ให้ความรู้สิทธิบัตรทอง · จัดทำเพื่อการเผยแพร่ความรู้แก่ประชาชน</p>
+                <p class="disclaimer">เว็บไซต์นี้เป็นสื่อการเรียนรู้ มิใช่เว็บไซต์ทางการของสำนักงานหลักประกันสุขภาพแห่งชาติ ข้อมูลอ้างอิงจาก สปสช. โปรดตรวจสอบสิทธิเฉพาะบุคคลและข้อมูลล่าสุดได้ที่สายด่วน 1330 หรือ nhso.go.th</p>
             </div>
         </div>
     </footer>
+
+    <button class="to-top" aria-label="กลับขึ้นด้านบน"><svg class="ic"><use href="#i-arrow-up"></use></svg></button>
+    <a class="float-line" href="https://lin.ee/zzn3pU6" target="_blank" rel="noopener" aria-label="แชทไลน์ สปสช."><svg class="ic"><use href="#i-line"></use></svg><span class="lbl">แชท สปสช.</span></a>
 
     <script src="script.js"></script>
 </body>

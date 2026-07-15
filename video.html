@@ -3,87 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>วิดีโอแนะนำ - สิทธิบัตรทอง</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>วิดีโอให้ความรู้สิทธิบัตรทอง | เข้าใจง่ายทุกวัย</title>
+    <meta name="description" content="รวมคลิปวิดีโอให้ความรู้เรื่องสิทธิบัตรทอง: บัตรทองคืออะไร วิธีเช็กสิทธิ ย้ายหน่วยบริการออนไลน์ สิทธิทันตกรรม และการใช้สิทธิกรณีฉุกเฉิน">
+    <meta name="theme-color" content="#0d5a4a">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo"><i class="fas fa-heart-pulse"></i> <span>สิทธิบัตรทอง</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="benefits.html">สิทธิประโยชน์</a></li>
-                <li><a href="check-status.html">เช็กสิทธิ/ย้ายหน่วยบริการ</a></li>
-                <li><a href="video.html" class="active">วิดีโอแนะนำ</a></li>
-                <li><a href="about.html">ประวัติผู้จัดทำ</a></li>
-            </ul>
-             <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+    <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+    <div class="nav-backdrop"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="บัตรทอง หน้าแรก">
+                <span class="brand-mark"><svg class="ic"><use href="#i-shield-heart"></use></svg></span>
+                <span class="brand-text"><strong>บัตรทอง</strong><small>หลักประกันสุขภาพแห่งชาติ</small></span>
+            </a>
+            <nav class="main-nav" aria-label="เมนูหลัก">
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="benefits.html">สิทธิประโยชน์</a></li>
+                    <li><a href="how-to.html">การใช้สิทธิ</a></li>
+                    <li><a href="register.html">เช็ก/ย้ายสิทธิ</a></li>
+                    <li><a href="faq.html">คำถามที่พบบ่อย</a></li>
+                    <li><a href="video.html" class="active">วิดีโอ</a></li>
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                    <li><a href="about.html">ผู้จัดทำ</a></li>
+                    <li class="nav-cta"><a class="btn btn-gold" href="tel:1330"><svg class="ic"><use href="#i-headset"></use></svg> สายด่วน 1330</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn-gold header-cta" href="tel:1330"><svg class="ic"><use href="#i-headset"></use></svg> สายด่วน 1330</a>
+            <button class="nav-toggle" aria-label="เปิด/ปิดเมนู" aria-expanded="false">
+                <svg class="ic ic-menu"><use href="#i-menu"></use></svg>
+                <svg class="ic ic-close"><use href="#i-close"></use></svg>
+            </button>
+        </div>
     </header>
 
-    <main class="container content-padding">
-    <h2 class="section-title">สื่อวิดีโอแนะนำสิทธิบัตรทอง</h2>
-    
-    <div class="video-grid">
-        <div class="video-card">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/YgDFzQ6EGzA?si" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h4>สิทธิบัตรทองคืออะไร?</h4>
-        </div>
-
-        <div class="video-card">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/j5DueV_IBgQ?si" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h4>วิธีเช็กสิทธิด้วยตนเอง</h4>
-        </div>
-
-        <div class="video-card">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/y0ibYZh1oFU?si" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h4>การย้ายหน่วยบริการออนไลน์</h4>
-        </div>
-
-        <div class="video-card">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/Xp_QppYkHcE?si" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h4>สิทธิทันตกรรมมีอะไรบ้าง</h4>
-        </div>
-
-        <div class="video-card">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/S7QpRvTinuU?si" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h4>นโยบายบัตรทองพรีเมียม</h4>
-        </div>
-
-        <div class="video-card">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/blEsI0j4mF4?si" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <h4>การใช้สิทธิกรณีฉุกเฉิน</h4>
+    <div class="pagehead">
+        <div class="container">
+            <p class="crumbs"><a href="index.html">หน้าแรก</a> / วิดีโอให้ความรู้</p>
+            <h1>วิดีโอให้ความรู้สิทธิบัตรทอง</h1>
+            <p>เรียนรู้เรื่องสิทธิและวิธีใช้บัตรทองผ่านคลิปสั้น เข้าใจง่าย เหมาะกับทุกวัย (กดปุ่มเล่นเพื่อโหลดวิดีโอ ช่วยประหยัดเน็ตเมื่อยังไม่ดู)</p>
         </div>
     </div>
-</main>
 
-<footer>
-        <div class="footer-container">
-            <div class="footer-info">
-                <h4>สิทธิบัตรทอง (หลักประกันสุขภาพแห่งชาติ)</h4>
-                <p>พัฒนาและดูแลระบบโดย <strong>ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเมืองพัทลุง</strong></p>
+    <main id="main">
+        <section class="section">
+            <div class="container">
+                <div class="video-grid">
+                    <article class="video-card reveal">
+                        <div class="video-frame" data-yt="YgDFzQ6EGzA" data-title="สิทธิบัตรทองคืออะไร" role="button" tabindex="0" aria-label="เล่นวิดีโอ สิทธิบัตรทองคืออะไร">
+                            <div class="video-fallback"><svg class="ic"><use href="#i-shield-heart"></use></svg></div>
+                            <div class="play"><svg class="ic"><use href="#i-play"></use></svg></div>
+                        </div>
+                        <h4>สิทธิบัตรทองคืออะไร?</h4>
+                    </article>
+
+                    <article class="video-card reveal">
+                        <div class="video-frame" data-yt="j5DueV_IBgQ" data-title="วิธีเช็กสิทธิด้วยตนเอง" role="button" tabindex="0" aria-label="เล่นวิดีโอ วิธีเช็กสิทธิด้วยตนเอง">
+                            <div class="video-fallback"><svg class="ic"><use href="#i-search"></use></svg></div>
+                            <div class="play"><svg class="ic"><use href="#i-play"></use></svg></div>
+                        </div>
+                        <h4>วิธีเช็กสิทธิด้วยตนเอง</h4>
+                    </article>
+
+                    <article class="video-card reveal">
+                        <div class="video-frame" data-yt="y0ibYZh1oFU" data-title="การย้ายหน่วยบริการออนไลน์" role="button" tabindex="0" aria-label="เล่นวิดีโอ การย้ายหน่วยบริการออนไลน์">
+                            <div class="video-fallback"><svg class="ic"><use href="#i-map-pin"></use></svg></div>
+                            <div class="play"><svg class="ic"><use href="#i-play"></use></svg></div>
+                        </div>
+                        <h4>การย้ายหน่วยบริการออนไลน์</h4>
+                    </article>
+
+                    <article class="video-card reveal">
+                        <div class="video-frame" data-yt="Xp_QppYkHcE" data-title="สิทธิทันตกรรมมีอะไรบ้าง" role="button" tabindex="0" aria-label="เล่นวิดีโอ สิทธิทันตกรรมมีอะไรบ้าง">
+                            <div class="video-fallback"><svg class="ic"><use href="#i-tooth"></use></svg></div>
+                            <div class="play"><svg class="ic"><use href="#i-play"></use></svg></div>
+                        </div>
+                        <h4>สิทธิทันตกรรมมีอะไรบ้าง</h4>
+                    </article>
+
+                    <article class="video-card reveal">
+                        <div class="video-frame" data-yt="S7QpRvTinuU" data-title="นโยบาย 30 บาทรักษาทุกที่" role="button" tabindex="0" aria-label="เล่นวิดีโอ นโยบาย 30 บาทรักษาทุกที่">
+                            <div class="video-fallback"><svg class="ic"><use href="#i-sparkle"></use></svg></div>
+                            <div class="play"><svg class="ic"><use href="#i-play"></use></svg></div>
+                        </div>
+                        <h4>นโยบาย 30 บาทรักษาทุกที่</h4>
+                    </article>
+
+                    <article class="video-card reveal">
+                        <div class="video-frame" data-yt="blEsI0j4mF4" data-title="การใช้สิทธิกรณีฉุกเฉิน" role="button" tabindex="0" aria-label="เล่นวิดีโอ การใช้สิทธิกรณีฉุกเฉิน">
+                            <div class="video-fallback"><svg class="ic"><use href="#i-ambulance"></use></svg></div>
+                            <div class="play"><svg class="ic"><use href="#i-play"></use></svg></div>
+                        </div>
+                        <h4>การใช้สิทธิกรณีฉุกเฉิน</h4>
+                    </article>
+                </div>
+
+                <div class="callout teal reveal" style="margin-top:36px">
+                    <svg class="ic"><use href="#i-info"></use></svg>
+                    <div>
+                        <h4>อยากดูสื่อเพิ่มเติม</h4>
+                        <p>ติดตามคลิปและอินโฟกราฟิกให้ความรู้เพิ่มเติมได้ที่ช่องทางทางการของ สปสช. หรือเว็บไซต์ <a href="https://www.nhso.go.th" target="_blank" rel="noopener">nhso.go.th</a></p>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section class="section-tight">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2>ดูวิดีโอแล้ว อยากเช็กสิทธิของตัวเอง?</h2>
+                    <p>ตรวจสอบสิทธิและหน่วยบริการประจำของคุณได้ทันที ผ่านแอปฯ สปสช. หรือสายด่วน 1330</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-gold btn-lg" href="register.html"><svg class="ic"><use href="#i-id-card"></use></svg> เช็กสิทธิของฉัน</a>
+                        <a class="btn btn-light btn-lg" href="benefits.html"><svg class="ic"><use href="#i-shield-heart"></use></svg> ดูสิทธิประโยชน์</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark"><svg class="ic"><use href="#i-shield-heart"></use></svg></span>
+                        <span class="brand-text"><strong>บัตรทอง</strong><small>หลักประกันสุขภาพแห่งชาติ</small></span>
+                    </a>
+                    <p>เว็บไซต์ให้ความรู้เรื่องสิทธิบัตรทอง (สิทธิ 30 บาท) เพื่อให้ประชาชนทุกคนเข้าถึงและใช้สิทธิได้อย่างถูกต้อง ครบถ้วน โดยไม่มีค่าใช้จ่าย</p>
+                    <div class="footer-hotline"><svg class="ic"><use href="#i-headset"></use></svg> สายด่วน สปสช. <b>1330</b></div>
+                </div>
+                <div class="footer-col">
+                    <h5>เมนูลัด</h5>
+                    <ul>
+                        <li><a href="benefits.html">สิทธิประโยชน์</a></li>
+                        <li><a href="how-to.html">การใช้สิทธิ</a></li>
+                        <li><a href="register.html">เช็ก / ย้ายสิทธิ</a></li>
+                        <li><a href="faq.html">คำถามที่พบบ่อย</a></li>
+                        <li><a href="video.html">วิดีโอให้ความรู้</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>ช่องทางราชการ</h5>
+                    <ul>
+                        <li><a href="tel:1330">สายด่วน สปสช. 1330</a></li>
+                        <li><a href="tel:1669">เจ็บป่วยฉุกเฉิน 1669</a></li>
+                        <li><a href="https://lin.ee/zzn3pU6" target="_blank" rel="noopener">ไลน์ @nhso</a></li>
+                        <li><a href="https://www.nhso.go.th" target="_blank" rel="noopener">เว็บไซต์ สปสช.</a></li>
+                        <li><a href="contact.html">ดาวน์โหลดแอปฯ สปสช.</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-dev">พัฒนาโดย <strong>ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเมืองพัทลุง</strong></div>
             <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. เว็บไซต์นี้เป็นสื่อกลางการให้ข้อมูลเบื้องต้นเท่านั้น</p>
+                <p>© 2026 เว็บไซต์ให้ความรู้สิทธิบัตรทอง · จัดทำเพื่อการเผยแพร่ความรู้แก่ประชาชน</p>
+                <p class="disclaimer">เว็บไซต์นี้เป็นสื่อการเรียนรู้ มิใช่เว็บไซต์ทางการของสำนักงานหลักประกันสุขภาพแห่งชาติ ข้อมูลอ้างอิงจาก สปสช. โปรดตรวจสอบสิทธิเฉพาะบุคคลและข้อมูลล่าสุดได้ที่สายด่วน 1330 หรือ nhso.go.th</p>
             </div>
         </div>
     </footer>
+
+    <button class="to-top" aria-label="กลับขึ้นด้านบน"><svg class="ic"><use href="#i-arrow-up"></use></svg></button>
+    <a class="float-line" href="https://lin.ee/zzn3pU6" target="_blank" rel="noopener" aria-label="แชทไลน์ สปสช."><svg class="ic"><use href="#i-line"></use></svg><span class="lbl">แชท สปสช.</span></a>
 
     <script src="script.js"></script>
 </body>

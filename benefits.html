@@ -3,110 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>สิทธิประโยชน์ - สิทธิบัตรทอง</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>สิทธิประโยชน์บัตรทอง | ครอบคลุมการรักษาอะไรบ้าง – หลักประกันสุขภาพแห่งชาติ</title>
+    <meta name="description" content="รวมสิทธิประโยชน์บัตรทองครบทุกด้าน: ผู้ป่วยนอก/ใน ร้านยา 32 อาการ ส่งเสริมสุขภาพ วัคซีน คัดกรองมะเร็ง โรคไต มะเร็ง หัวใจ หลอดเลือดสมอง HIV ทันตกรรม แม่และเด็ก สุขภาพจิต ฟื้นฟู แพทย์แผนไทย และฉุกเฉิน UCEP">
+    <meta name="theme-color" content="#0d5a4a">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo"><i class="fas fa-heart-pulse"></i> <span>ThaiHealth Card</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="benefits.html" class="active">สิทธิประโยชน์</a></li>
-                <li><a href="check-status.html">เช็กสิทธิ/ย้ายหน่วยบริการ</a></li>
-                <li><a href="video.html">วิดีโอแนะนำ</a></li>
-                <li><a href="about.html">ประวัติผู้จัดทำ</a></li>
-            </ul>
-             <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+    <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+    <div class="nav-backdrop"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="บัตรทอง หน้าแรก">
+                <span class="brand-mark"><svg class="ic"><use href="#i-shield-heart"></use></svg></span>
+                <span class="brand-text"><strong>บัตรทอง</strong><small>หลักประกันสุขภาพแห่งชาติ</small></span>
+            </a>
+            <nav class="main-nav" aria-label="เมนูหลัก">
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="benefits.html" class="active">สิทธิประโยชน์</a></li>
+                    <li><a href="how-to.html">การใช้สิทธิ</a></li>
+                    <li><a href="register.html">เช็ก/ย้ายสิทธิ</a></li>
+                    <li><a href="faq.html">คำถามที่พบบ่อย</a></li>
+                    <li><a href="video.html">วิดีโอ</a></li>
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                    <li><a href="about.html">ผู้จัดทำ</a></li>
+                    <li class="nav-cta"><a class="btn btn-gold" href="tel:1330"><svg class="ic"><use href="#i-headset"></use></svg> สายด่วน 1330</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn-gold header-cta" href="tel:1330"><svg class="ic"><use href="#i-headset"></use></svg> สายด่วน 1330</a>
+            <button class="nav-toggle" aria-label="เปิด/ปิดเมนู" aria-expanded="false">
+                <svg class="ic ic-menu"><use href="#i-menu"></use></svg>
+                <svg class="ic ic-close"><use href="#i-close"></use></svg>
+            </button>
+        </div>
     </header>
 
-    <main class="container content-padding">
-        <h2 class="section-title">สิทธิบัตรทองครอบคลุมการรักษาอะไรบ้าง?</h2>
-        
-        <div class="benefit-group">
-            <h3 class="group-title"><i class="fas fa-user-md"></i> 1. การรักษาพยาบาลทั่วไป</h3>
-            <div class="benefits-grid">
-                <div class="benefit-item bg-blue">
-                    <i class="fas fa-pills"></i>
-                    <h4>เจ็บป่วยเล็กน้อย 32 อาการ</h4>
-                    <p>รับยาฟรีที่ร้านยาคุณภาพ (ปวดหัว, ปวดข้อ, ปวดฟัน ฯลฯ) ไม่ต้องไปโรงพยาบาล</p>
-                </div>
-                <div class="benefit-item bg-blue">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h4>พบแพทย์ออนไลน์ (Telemedicine)</h4>
-                    <p>ครอบคลุม 42 กลุ่มโรค ผ่านแอปฯ หมอดี, Clicknic, Saluber MD และ Totale Telemed</p>
-                </div>
-            </div>
+    <div class="pagehead">
+        <div class="container">
+            <p class="crumbs"><a href="index.html">หน้าแรก</a> / สิทธิประโยชน์</p>
+            <h1>สิทธิบัตรทองครอบคลุมการรักษาอะไรบ้าง</h1>
+            <p>ตั้งแต่การดูแลสุขภาพประจำวัน ไปจนถึงโรคร้ายแรงที่มีค่าใช้จ่ายสูง สิทธิบัตรทองออกแบบมาเพื่อดูแลคุณอย่างครบวงจร ทุกช่วงวัย</p>
         </div>
+    </div>
 
-        <div class="benefit-group" style="margin-top: 50px;">
-            <h3 class="group-title"><i class="fas fa-hospital-symbol"></i> 2. การรักษาโรคเรื้อรังและค่าใช้จ่ายสูง</h3>
-            <div class="benefits-grid">
-                <div class="benefit-item bg-gold">
-                    <i class="fas fa-ribbon"></i>
-                    <h4>โรคมะเร็ง (Cancer Anywhere)</h4>
-                    <p>รักษาได้ทุกที่ที่พร้อม ไม่ต้องใช้ใบส่งตัว ครอบคลุมเคมีบำบัดและรังสีรักษา</p>
-                </div>
-                <div class="benefit-item bg-gold">
-                    <i class="fas fa-biohazard"></i>
-                    <h4>โรคไตเรื้อรัง</h4>
-                    <p>ครอบคลุมการล้างไตทางช่องท้อง การฟอกไตด้วยเครื่อง และการปลูกถ่ายไต</p>
-                </div>
-                <div class="benefit-item bg-gold">
-                    <i class="fas fa-brain"></i>
-                    <h4>หลอดเลือดสมองและหัวใจ</h4>
-                    <p>ระบบช่องทางเร่งด่วน (Fast Track) เพื่อลดภาวะอัมพฤกษ์ อัมพาต</p>
+    <main id="main">
+        <!-- GROUP 1 -->
+        <section class="section">
+            <div class="container">
+                <div class="benefit-block">
+                    <span class="group-title"><svg class="ic"><use href="#i-stethoscope"></use></svg> 1. การรักษาพยาบาลทั่วไป</span>
+                    <div class="grid grid-2">
+                        <article class="benefit-item b-blue reveal">
+                            <h4><svg class="ic"><use href="#i-hospital"></use></svg> บริการผู้ป่วยนอก (OPD)</h4>
+                            <p>ตรวจวินิจฉัย รักษา และรับยาตามบัญชียาหลักแห่งชาติ สำหรับการเจ็บป่วยทั่วไป โรคหวัด อาการปวด และการติดตามอาการ</p>
+                        </article>
+                        <article class="benefit-item b-blue reveal">
+                            <h4><svg class="ic"><use href="#i-bed"></use></svg> บริการผู้ป่วยใน (IPD)</h4>
+                            <p>นอนพักรักษาตัว การผ่าตัด ค่าห้องสามัญ ค่าอาหาร ค่าเวชภัณฑ์ และการดูแลโดยทีมแพทย์–พยาบาลตลอดการรักษา</p>
+                        </article>
+                        <article class="benefit-item b-blue reveal">
+                            <h4><svg class="ic"><use href="#i-pill"></use></svg> เจ็บป่วยเล็กน้อยที่ร้านยา (32 อาการ)</h4>
+                            <p>ปวดหัว เป็นหวัด ท้องเสีย ปวดข้อ ผื่นคัน ฯลฯ ปรึกษาเภสัชกรและรับยาฟรีที่ร้านยาคุณภาพที่ร่วมโครงการ ใช้เพียงบัตรประชาชน</p>
+                        </article>
+                        <article class="benefit-item b-blue reveal">
+                            <h4><svg class="ic"><use href="#i-laptop-medical"></use></svg> พบแพทย์ออนไลน์ (Telemedicine)</h4>
+                            <p>ปรึกษาแพทย์/พยาบาลผ่านแอปพลิเคชันที่ร่วมโครงการ พร้อมบริการจัดส่งยาถึงบ้าน เหมาะกับผู้ป่วยโรคเรื้อรังที่รับยาต่อเนื่อง</p>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="emergency-box">
-            <h3 style="color: #e53e3e;"><i class="fas fa-ambulance"></i> 3. กรณีเจ็บป่วยฉุกเฉิน (UCEP)</h3>
-            <div class="emergency-grid">
-                <div class="emergency-item">
-                    <strong>🔴 ฉุกเฉินวิกฤต:</strong>
-                    <p>เข้าโรงพยาบาลที่ใกล้ที่สุดได้ทุกแห่ง (รวมเอกชน) ฟรีจนพ้นวิกฤต 72 ชม.</p>
-                </div>
-                <div class="emergency-item">
-                    <strong>🟡 ฉุกเฉินไม่วิกฤต:</strong>
-                    <p>เข้ารักษาได้ที่โรงพยาบาลรัฐที่ใกล้ที่สุด ไม่จำกัดจำนวนครั้ง</p>
+        <!-- GROUP 2 -->
+        <section class="section bg-warm">
+            <div class="container">
+                <div class="benefit-block">
+                    <span class="group-title"><svg class="ic"><use href="#i-shield-check"></use></svg> 2. สร้างเสริมสุขภาพและป้องกันโรค</span>
+                    <div class="callout teal reveal" style="margin-bottom:24px">
+                        <svg class="ic"><use href="#i-star"></use></svg>
+                        <div>
+                            <h4>สิทธิพิเศษ: ครอบคลุมคนไทยทุกคน ทุกสิทธิ</h4>
+                            <p>บริการกลุ่มนี้ให้กับคนไทยทุกคน ไม่ว่าจะถือสิทธิบัตรทอง ประกันสังคม หรือสิทธิข้าราชการ เพียงใช้บัตรประชาชน</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-3">
+                        <article class="benefit-item b-green reveal">
+                            <h4><svg class="ic"><use href="#i-syringe"></use></svg> วัคซีนตามช่วงวัย</h4>
+                            <p>วัคซีนพื้นฐานสำหรับเด็ก วัคซีนไข้หวัดใหญ่สำหรับกลุ่มเสี่ยง วัคซีน HPV ป้องกันมะเร็งปากมดลูกในเด็กหญิง และวัคซีนผู้ใหญ่ตามเกณฑ์</p>
+                        </article>
+                        <article class="benefit-item b-green reveal">
+                            <h4><svg class="ic"><use href="#i-search"></use></svg> ตรวจคัดกรองโรค</h4>
+                            <p>คัดกรองมะเร็งปากมดลูก มะเร็งเต้านม มะเร็งลำไส้ใหญ่ (ตรวจอุจจาระ) เบาหวาน ความดัน ไวรัสตับอักเสบ และคัดกรองเอชไอวี</p>
+                        </article>
+                        <article class="benefit-item b-green reveal">
+                            <h4><svg class="ic"><use href="#i-baby"></use></svg> อนามัยแม่และเด็ก</h4>
+                            <p>ฝากครรภ์คุณภาพ ตรวจหลังคลอด คัดกรองพัฒนาการเด็ก คัดกรองภาวะดาวน์และธาลัสซีเมียในหญิงตั้งครรภ์</p>
+                        </article>
+                        <article class="benefit-item b-green reveal">
+                            <h4><svg class="ic"><use href="#i-heart"></use></svg> วางแผนครอบครัว</h4>
+                            <p>ยาคุมกำเนิด ถุงยางอนามัย ยาฝัง/ห่วงอนามัยคุมกำเนิด และการตรวจการตั้งครรภ์ เพื่อการวางแผนครอบครัวอย่างปลอดภัย</p>
+                        </article>
+                        <article class="benefit-item b-green reveal">
+                            <h4><svg class="ic"><use href="#i-tooth"></use></svg> ตรวจสุขภาพช่องปาก</h4>
+                            <p>ตรวจสุขภาพฟัน เคลือบฟลูออไรด์ในเด็ก และให้ความรู้การดูแลช่องปากเพื่อป้องกันฟันผุตั้งแต่เนิ่น ๆ</p>
+                        </article>
+                        <article class="benefit-item b-green reveal">
+                            <h4><svg class="ic"><use href="#i-hand-heart"></use></svg> ของใช้เพื่อสุขภาพ</h4>
+                            <p>ผ้าอ้อมผู้ใหญ่และแผ่นรองซับสำหรับผู้ที่มีภาวะติดบ้านติดเตียงตามเกณฑ์ และแว่นตาสำหรับเด็กที่มีภาวะสายตาผิดปกติ</p>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="benefit-group" style="margin-top: 50px;">
-            <h3 class="group-title"><i class="fas fa-apple-alt"></i> 4. บริการส่งเสริมสุขภาพและป้องกันโรค</h3>
-            <div class="benefits-grid">
-                <div class="benefit-item bg-green">
-                    <i class="fas fa-shield-virus"></i>
-                    <h4>การป้องกันและวัคซีน</h4>
-                    <p>ฉีดวัคซีนไข้หวัดใหญ่ และตรวจคัดกรองมะเร็งต่างๆ ฟรี</p>
-                </div>
-                <div class="benefit-item bg-purple">
-                    <i class="fas fa-baby-carriage"></i>
-                    <h4>แม่และเด็ก / สุขภาพจิต</h4>
-                    <p>ฝากครรภ์ฟรี และรับคำปรึกษาปัญหาสุขภาพจิตได้ทุกกรณี</p>
+        <!-- GROUP 3 -->
+        <section class="section">
+            <div class="container">
+                <div class="benefit-block">
+                    <span class="group-title"><svg class="ic"><use href="#i-activity"></use></svg> 3. โรคเรื้อรังและโรคค่าใช้จ่ายสูง</span>
+                    <div class="grid grid-3">
+                        <article class="benefit-item b-amber reveal">
+                            <h4><svg class="ic"><use href="#i-droplet"></use></svg> เบาหวาน &amp; ความดันโลหิตสูง</h4>
+                            <p>ตรวจติดตาม รับยาต่อเนื่อง และคัดกรองภาวะแทรกซ้อนทางตา ไต และเท้า เพื่อควบคุมโรคระยะยาว</p>
+                        </article>
+                        <article class="benefit-item b-amber reveal">
+                            <h4><svg class="ic"><use href="#i-droplet"></use></svg> โรคไตเรื้อรัง</h4>
+                            <p>ครอบคลุมการล้างไตทางช่องท้อง (CAPD) การฟอกเลือดด้วยเครื่อง (HD) การปลูกถ่ายไต และยากดภูมิคุ้มกันหลังปลูกถ่าย</p>
+                        </article>
+                        <article class="benefit-item b-amber reveal">
+                            <h4><svg class="ic"><use href="#i-ribbon"></use></svg> โรคมะเร็ง (รักษาทุกที่)</h4>
+                            <p>“มะเร็งรักษาได้ทุกที่” เข้ารับการรักษาที่หน่วยบริการที่มีศักยภาพได้โดยไม่ต้องใช้ใบส่งตัว ครอบคลุมเคมีบำบัดและรังสีรักษา</p>
+                        </article>
+                        <article class="benefit-item b-amber reveal">
+                            <h4><svg class="ic"><use href="#i-heart"></use></svg> โรคหัวใจและหลอดเลือด</h4>
+                            <p>การผ่าตัดหัวใจ การสวนหัวใจและขยายหลอดเลือดด้วยบอลลูน/ขดลวด และการดูแลผู้ป่วยหัวใจอย่างต่อเนื่อง</p>
+                        </article>
+                        <article class="benefit-item b-amber reveal">
+                            <h4><svg class="ic"><use href="#i-brain"></use></svg> โรคหลอดเลือดสมอง (Stroke)</h4>
+                            <p>ระบบทางด่วนโรคหลอดเลือดสมอง (Stroke Fast Track) ให้ยาละลายลิ่มเลือดทันเวลา เพื่อลดความเสี่ยงอัมพฤกษ์ อัมพาต</p>
+                        </article>
+                        <article class="benefit-item b-amber reveal">
+                            <h4><svg class="ic"><use href="#i-shield-check"></use></svg> เอชไอวี/เอดส์ &amp; วัณโรค</h4>
+                            <p>ยาต้านไวรัส (ARV) การตรวจติดตาม ยาป้องกันก่อน–หลังสัมผัสเชื้อ (PrEP/PEP) และการรักษาวัณโรคจนหายขาด</p>
+                        </article>
+                        <article class="benefit-item b-amber reveal">
+                            <h4><svg class="ic"><use href="#i-droplet"></use></svg> โรคเลือด (ธาลัสซีเมีย/ฮีโมฟีเลีย)</h4>
+                            <p>การให้เลือด ยารักษา และการดูแลผู้ป่วยโรคเลือดทางพันธุกรรมอย่างต่อเนื่องตลอดชีวิต</p>
+                        </article>
+                        <article class="benefit-item b-amber reveal">
+                            <h4><svg class="ic"><use href="#i-brain"></use></svg> สุขภาพจิตและจิตเวช</h4>
+                            <p>ตรวจประเมิน บำบัด รับยา และให้คำปรึกษาปัญหาสุขภาพจิต พร้อมสายด่วนสุขภาพจิต 1323 ตลอด 24 ชั่วโมง</p>
+                        </article>
+                        <article class="benefit-item b-amber reveal">
+                            <h4><svg class="ic"><use href="#i-hand-heart"></use></svg> การปลูกถ่ายอวัยวะ</h4>
+                            <p>ครอบคลุมการปลูกถ่ายไต ตับในเด็ก หัวใจ กระจกตา และการปลูกถ่ายเซลล์ต้นกำเนิด (สเต็มเซลล์) ตามเกณฑ์ที่กำหนด</p>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- GROUP 4 -->
+        <section class="section bg-warm">
+            <div class="container">
+                <div class="benefit-block">
+                    <span class="group-title"><svg class="ic"><use href="#i-tooth"></use></svg> 4. ทันตกรรม</span>
+                    <div class="grid grid-2">
+                        <article class="benefit-item b-cyan reveal">
+                            <h4><svg class="ic"><use href="#i-tooth"></use></svg> บริการทันตกรรมพื้นฐาน</h4>
+                            <p>อุดฟัน ถอนฟัน ขูดหินปูน เคลือบฟลูออไรด์ และเคลือบหลุมร่องฟัน เพื่อดูแลสุขภาพช่องปากให้แข็งแรง</p>
+                        </article>
+                        <article class="benefit-item b-cyan reveal">
+                            <h4><svg class="ic"><use href="#i-tooth"></use></svg> ฟันปลอมและรักษาราก</h4>
+                            <p>ใส่ฟันเทียม/ฟันปลอมตามข้อบ่งชี้ และการรักษารากฟันในบางกรณี เพื่อฟื้นฟูการบดเคี้ยวและคุณภาพชีวิต</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GROUP 5: EMERGENCY -->
+        <section class="section">
+            <div class="container">
+                <div class="emergency reveal">
+                    <span class="group-title"><svg class="ic"><use href="#i-ambulance"></use></svg> 5. เจ็บป่วยฉุกเฉินวิกฤต (UCEP)</span>
+                    <p style="margin-bottom:6px;color:var(--muted)">“เจ็บป่วยฉุกเฉินวิกฤต มีสิทธิทุกที่” เข้ารักษาที่โรงพยาบาลใกล้ที่สุดได้ทุกแห่ง รวมถึงโรงพยาบาลเอกชน โดยไม่ต้องสำรองจ่าย โทรแจ้งเหตุ <strong>1669</strong></p>
+                    <div class="emergency-grid">
+                        <div class="emergency-item">
+                            <h4><span class="dot" style="background:#e11d48"></span> ฉุกเฉินวิกฤต (สีแดง)</h4>
+                            <p>หมดสติ หยุดหายใจ เจ็บหน้าอกรุนแรง แขนขาอ่อนแรงเฉียบพลัน เข้าโรงพยาบาลที่ใกล้ที่สุดได้ทุกแห่ง ฟรีจนพ้นวิกฤต 72 ชั่วโมง</p>
+                        </div>
+                        <div class="emergency-item">
+                            <h4><span class="dot" style="background:#f5a623"></span> ฉุกเฉินเร่งด่วน/ไม่วิกฤต</h4>
+                            <p>อาการเจ็บป่วยเร่งด่วนที่ไม่ถึงขั้นวิกฤต แนะนำให้เข้ารักษาที่โรงพยาบาลรัฐที่ใกล้ที่สุด หรือหน่วยบริการตามสิทธิ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GROUP 6 -->
+        <section class="section bg-warm">
+            <div class="container">
+                <div class="benefit-block">
+                    <span class="group-title"><svg class="ic"><use href="#i-wheelchair"></use></svg> 6. ฟื้นฟูสมรรถภาพและบริการเฉพาะ</span>
+                    <div class="grid grid-3">
+                        <article class="benefit-item b-violet reveal">
+                            <h4><svg class="ic"><use href="#i-wheelchair"></use></svg> ฟื้นฟูสมรรถภาพ</h4>
+                            <p>กายภาพบำบัด กิจกรรมบำบัด ฝึกพูด และอุปกรณ์ช่วย เช่น แขน–ขาเทียม รถเข็น ไม้เท้า และเครื่องช่วยฟัง</p>
+                        </article>
+                        <article class="benefit-item b-violet reveal">
+                            <h4><svg class="ic"><use href="#i-eye"></use></svg> ผ่าตัดต้อกระจก</h4>
+                            <p>ผ่าตัดต้อกระจกพร้อมใส่เลนส์แก้วตาเทียม เพื่อคืนการมองเห็นให้ผู้สูงอายุและผู้ป่วยที่มีข้อบ่งชี้</p>
+                        </article>
+                        <article class="benefit-item b-violet reveal">
+                            <h4><svg class="ic"><use href="#i-leaf"></use></svg> การแพทย์แผนไทย</h4>
+                            <p>นวด ประคบสมุนไพร อบไอน้ำ การดูแลมารดาหลังคลอด (ทับหม้อเกลือ) และยาสมุนไพรในบัญชียาหลัก</p>
+                        </article>
+                        <article class="benefit-item b-violet reveal">
+                            <h4><svg class="ic"><use href="#i-home"></use></svg> ดูแลผู้สูงอายุ/ติดเตียง (LTC)</h4>
+                            <p>บริการดูแลระยะยาวสำหรับผู้สูงอายุที่มีภาวะพึ่งพิง ทั้งการดูแลที่บ้านและในชุมชนโดยทีมสหวิชาชีพ</p>
+                        </article>
+                        <article class="benefit-item b-violet reveal">
+                            <h4><svg class="ic"><use href="#i-hand-heart"></use></svg> ดูแลแบบประคับประคอง</h4>
+                            <p>การดูแลผู้ป่วยระยะท้ายแบบประคับประคอง (Palliative Care) ที่บ้าน พร้อมอุปกรณ์และยาบรรเทาอาการ</p>
+                        </article>
+                        <article class="benefit-item b-violet reveal">
+                            <h4><svg class="ic"><use href="#i-users"></use></svg> จ่ายยาโรคเรื้อรังใกล้บ้าน</h4>
+                            <p>รับยาโรคเรื้อรังต่อเนื่องที่หน่วยบริการปฐมภูมิหรือร้านยาใกล้บ้าน ลดความแออัดและการเดินทางไปโรงพยาบาลใหญ่</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="callout reveal" style="margin-top:34px">
+                    <svg class="ic"><use href="#i-info"></use></svg>
+                    <div>
+                        <h4>สิทธิประโยชน์มีการปรับปรุงเพิ่มเติมทุกปี</h4>
+                        <p>สปสช. ทยอยเพิ่มรายการบริการใหม่ ๆ อย่างต่อเนื่อง สิทธิบางรายการอาจมีเงื่อนไข ข้อบ่งชี้ทางการแพทย์ หรือกลุ่มเป้าหมายเฉพาะ ตรวจสอบสิทธิของคุณได้ที่สายด่วน 1330 หรือ nhso.go.th</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section-tight">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2>อยากรู้ว่าใช้สิทธิเหล่านี้ที่ไหนได้บ้าง?</h2>
+                    <p>ดูสถานที่ใช้สิทธิ ขั้นตอนการรับบริการ และสิ่งที่บัตรทองไม่ครอบคลุม เพื่อวางแผนการรักษาได้อย่างมั่นใจ</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-gold btn-lg" href="how-to.html"><svg class="ic"><use href="#i-map-pin"></use></svg> ดูวิธีและสถานที่ใช้สิทธิ</a>
+                        <a class="btn btn-light btn-lg" href="register.html"><svg class="ic"><use href="#i-id-card"></use></svg> เช็กสิทธิของฉัน</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-info">
-                <h4>สิทธิบัตรทอง (หลักประกันสุขภาพแห่งชาติ)</h4>
-                <p>พัฒนาและดูแลระบบโดย <strong>ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเมืองพัทลุง</strong></p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark"><svg class="ic"><use href="#i-shield-heart"></use></svg></span>
+                        <span class="brand-text"><strong>บัตรทอง</strong><small>หลักประกันสุขภาพแห่งชาติ</small></span>
+                    </a>
+                    <p>เว็บไซต์ให้ความรู้เรื่องสิทธิบัตรทอง (สิทธิ 30 บาท) เพื่อให้ประชาชนทุกคนเข้าถึงและใช้สิทธิได้อย่างถูกต้อง ครบถ้วน โดยไม่มีค่าใช้จ่าย</p>
+                    <div class="footer-hotline"><svg class="ic"><use href="#i-headset"></use></svg> สายด่วน สปสช. <b>1330</b></div>
+                </div>
+                <div class="footer-col">
+                    <h5>เมนูลัด</h5>
+                    <ul>
+                        <li><a href="benefits.html">สิทธิประโยชน์</a></li>
+                        <li><a href="how-to.html">การใช้สิทธิ</a></li>
+                        <li><a href="register.html">เช็ก / ย้ายสิทธิ</a></li>
+                        <li><a href="faq.html">คำถามที่พบบ่อย</a></li>
+                        <li><a href="video.html">วิดีโอให้ความรู้</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>ช่องทางราชการ</h5>
+                    <ul>
+                        <li><a href="tel:1330">สายด่วน สปสช. 1330</a></li>
+                        <li><a href="tel:1669">เจ็บป่วยฉุกเฉิน 1669</a></li>
+                        <li><a href="https://lin.ee/zzn3pU6" target="_blank" rel="noopener">ไลน์ @nhso</a></li>
+                        <li><a href="https://www.nhso.go.th" target="_blank" rel="noopener">เว็บไซต์ สปสช.</a></li>
+                        <li><a href="contact.html">ดาวน์โหลดแอปฯ สปสช.</a></li>
+                    </ul>
+                </div>
             </div>
+            <div class="footer-dev">พัฒนาโดย <strong>ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเมืองพัทลุง</strong></div>
             <div class="footer-bottom">
-                <p>&copy; 2026 All Rights Reserved. เว็บไซต์นี้เป็นสื่อกลางการให้ข้อมูลเบื้องต้นเท่านั้น</p>
+                <p>© 2026 เว็บไซต์ให้ความรู้สิทธิบัตรทอง · จัดทำเพื่อการเผยแพร่ความรู้แก่ประชาชน</p>
+                <p class="disclaimer">เว็บไซต์นี้เป็นสื่อการเรียนรู้ มิใช่เว็บไซต์ทางการของสำนักงานหลักประกันสุขภาพแห่งชาติ ข้อมูลอ้างอิงจาก สปสช. โปรดตรวจสอบสิทธิเฉพาะบุคคลและข้อมูลล่าสุดได้ที่สายด่วน 1330 หรือ nhso.go.th</p>
             </div>
         </div>
     </footer>
+
+    <button class="to-top" aria-label="กลับขึ้นด้านบน"><svg class="ic"><use href="#i-arrow-up"></use></svg></button>
+    <a class="float-line" href="https://lin.ee/zzn3pU6" target="_blank" rel="noopener" aria-label="แชทไลน์ สปสช."><svg class="ic"><use href="#i-line"></use></svg><span class="lbl">แชท สปสช.</span></a>
 
     <script src="script.js"></script>
 </body>
