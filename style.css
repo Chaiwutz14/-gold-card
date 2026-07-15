@@ -310,6 +310,18 @@ body.nav-open .nav-backdrop { opacity: 1; visibility: visible; }
 .hero-trust span { display: inline-flex; align-items: center; gap: 8px; }
 .hero-trust .ic { color: var(--gold-400); }
 
+/* Keep the two hero buttons on one row on phones; scale them down so they never overflow */
+@media (max-width: 560px) {
+    .hero .hero-actions { flex-wrap: nowrap; gap: 10px; }
+    .hero .hero-actions .btn { flex: 1 1 0; min-width: 0; padding: 14px 12px; font-size: .92rem; white-space: nowrap; }
+    .hero .hero-actions .btn .ic { width: 1.05em; height: 1.05em; }
+}
+@media (max-width: 400px) {
+    .hero .hero-actions { gap: 8px; }
+    .hero .hero-actions .btn { padding: 13px 8px; font-size: .84rem; }
+    .hero .hero-actions .btn .ic { display: none; }
+}
+
 /* Hero side card */
 .hero-card {
     background: rgba(255,255,255,.97);
