@@ -554,20 +554,45 @@ body.nav-open .nav-backdrop { opacity: 1; visibility: visible; }
 .video-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; box-shadow: var(--sh-xs); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
 .video-card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); }
 .video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #0a2b23; cursor: pointer; overflow: hidden; }
-.video-frame img, .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
-.video-frame .play {
-    position: absolute; inset: 0; margin: auto;
-    width: 68px; height: 68px; border-radius: 50%;
-    background: rgba(203,161,53,.95);
+.video-frame iframe, .video-frame .video-player { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* Facade poster: makes it obvious this is a tappable video */
+.video-poster {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 10px;
+    padding: 16px; text-align: center; color: #fff;
+    background: linear-gradient(135deg, var(--teal-700), var(--teal-900));
+    transition: background .2s var(--ease);
+}
+.video-frame:hover .video-poster, .video-frame:focus-visible .video-poster { background: linear-gradient(135deg, var(--teal-600), var(--teal-800)); }
+.video-poster .play {
+    width: 66px; height: 66px; border-radius: 50%;
+    background: rgba(203,161,53,.96);
     display: grid; place-items: center;
     color: #3a2c05;
     box-shadow: var(--sh-md);
     transition: transform .2s var(--ease), background .2s var(--ease);
 }
-.video-frame:hover .play { transform: scale(1.08); background: var(--gold-400); }
-.video-frame .play .ic { width: 30px; height: 30px; margin-left: 3px; }
-.video-fallback { position: absolute; inset: 0; display: grid; place-items: center; color: #bfe0d5; background: linear-gradient(135deg, var(--teal-700), var(--teal-900)); }
-.video-fallback .ic { width: 46px; height: 46px; }
+.video-frame:hover .video-poster .play { transform: scale(1.08); background: var(--gold-400); }
+.video-poster .play .ic { width: 30px; height: 30px; margin-left: 3px; }
+.video-cta-title { font-family: var(--f-head); font-weight: 700; font-size: 1.2rem; color: #fff; margin-top: 2px; }
+.video-cta-sub { display: inline-flex; align-items: center; gap: 6px; font-size: .88rem; color: #cbe7dd; }
+.video-cta-sub .ic { width: 1em; height: 1em; color: var(--gold-400); }
+
+/* Loading + error states */
+.video-loading { position: absolute; inset: 0; display: grid; place-items: center; gap: 10px; color: #cbe7dd; font-size: .92rem; background: linear-gradient(135deg, var(--teal-800), var(--teal-900)); }
+.video-error {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 8px;
+    padding: 20px; text-align: center; color: #fff;
+    background: linear-gradient(135deg, #7a2233, #3b1420);
+}
+.video-error .err-ic { width: 40px; height: 40px; color: var(--gold-400); }
+.video-error b { font-family: var(--f-head); font-size: 1.12rem; }
+.video-error p { font-size: .84rem; color: #f0cdd4; max-width: 260px; line-height: 1.55; }
+.video-error .btn { margin-top: 6px; }
 .video-card h4 { padding: 16px 18px; font-size: 1.04rem; color: var(--ink); }
 
 /* ---------- 17) Team / About ---------- */

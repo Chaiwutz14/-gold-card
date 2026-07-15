@@ -141,23 +141,68 @@
             });
         });
 
-        /* Lazy YouTube facade (loads iframe only on user action) */
+        /* Lazy YouTube video (loads only on user action, via the IFrame API so
+           we can detect deleted/blocked videos and show a clear error state) */
+        var ytApiPromise = null;
+        function loadYTApi() {
+            if (ytApiPromise) return ytApiPromise;
+            ytApiPromise = new Promise(function (resolve, reject) {
+                if (window.YT && window.YT.Player) { resolve(window.YT); return; }
+                var prev = window.onYouTubeIframeAPIReady;
+                window.onYouTubeIframeAPIReady = function () {
+                    if (typeof prev === "function") { try { prev(); } catch (e) {} }
+                    resolve(window.YT);
+                };
+                var s = document.createElement("script");
+                s.src = "https://www.youtube.com/iframe_api";
+                s.onerror = function () { reject(new Error("โหลดตัวเล่นวิดีโอไม่สำเร็จ")); };
+                document.head.appendChild(s);
+                // Safety net: if the API never signals ready (e.g. blocked), fail after 12s
+                setTimeout(function () { reject(new Error("หมดเวลาโหลดวิดีโอ")); }, 12000);
+            });
+            return ytApiPromise;
+        }
+
+        function showVideoError(frame, id) {
+            frame.innerHTML =
+                '<div class="video-error">' +
+                    '<svg class="ic err-ic"><use href="#i-alert"></use></svg>' +
+                    "<b>วิดีโอขัดข้อง</b>" +
+                    "<p>ขออภัย ไม่สามารถเล่นวิดีโอนี้ได้ในขณะนี้ วิดีโออาจถูกลบหรือปิดการฝัง</p>" +
+                    '<a class="btn btn-light" href="https://www.youtube.com/watch?v=' + id +
+                        '" target="_blank" rel="noopener"><svg class="ic"><use href="#i-external"></use></svg> ลองเปิดใน YouTube</a>' +
+                "</div>";
+        }
+
         document.querySelectorAll(".video-frame[data-yt]").forEach(function (frame) {
-            function loadVideo() {
+            function playVideo() {
                 if (frame.dataset.loaded) return;
                 frame.dataset.loaded = "1";
                 var id = frame.getAttribute("data-yt");
-                var iframe = document.createElement("iframe");
-                iframe.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
-                iframe.title = frame.getAttribute("data-title") || "วิดีโอ";
-                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-                iframe.setAttribute("allowfullscreen", "");
+                var title = frame.getAttribute("data-title") || "วิดีโอ";
+                frame.innerHTML = '<div class="video-loading">กำลังโหลดวิดีโอ…</div>';
+                var mount = document.createElement("div");
+                mount.className = "video-player";
                 frame.innerHTML = "";
-                frame.appendChild(iframe);
+                frame.appendChild(mount);
+                loadYTApi().then(function (YT) {
+                    new YT.Player(mount, {
+                        width: "100%",
+                        height: "100%",
+                        videoId: id,
+                        host: "https://www.youtube-nocookie.com",
+                        playerVars: { autoplay: 1, rel: 0, modestbranding: 1, playsinline: 1 },
+                        events: {
+                            onReady: function (e) { try { e.target.playVideo(); } catch (err) {} },
+                            onError: function () { showVideoError(frame, id); }
+                        }
+                    });
+                }).catch(function () { showVideoError(frame, id); });
+                frame.setAttribute("aria-label", "กำลังเล่นวิดีโอ " + title);
             }
-            frame.addEventListener("click", loadVideo);
+            frame.addEventListener("click", playVideo);
             frame.addEventListener("keydown", function (e) {
-                if (e.key === "Enter" || e.key === " ") { e.preventDefault(); loadVideo(); }
+                if (e.key === "Enter" || e.key === " ") { e.preventDefault(); playVideo(); }
             });
         });
     });
