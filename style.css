@@ -284,7 +284,8 @@ body.nav-open .nav-backdrop { opacity: 1; visibility: visible; }
     display: grid;
     gap: 40px;
     align-items: center;
-    padding: 62px 0 72px;
+    /* padding-block only — keep .container's horizontal gutter (padding-inline) intact */
+    padding-block: 62px 72px;
 }
 .hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
@@ -692,7 +693,7 @@ body.nav-open .nav-backdrop { opacity: 1; visibility: visible; }
     .grid-4 { grid-template-columns: repeat(2, 1fr); }
     .team-grid { grid-template-columns: repeat(2, 1fr); }
     .channel-grid { grid-template-columns: repeat(3, 1fr); }
-    .hero-inner { grid-template-columns: 1.15fr .85fr; padding: 76px 0 90px; }
+    .hero-inner { grid-template-columns: 1.15fr .85fr; padding-block: 76px 90px; }
     .footer-grid { grid-template-columns: 1.6fr 1fr 1fr; }
     .section { padding: 80px 0; }
 }
