@@ -256,6 +256,27 @@ strong { font-weight: 600; color: var(--ink); }
 body.nav-open .nav-toggle .ic-menu  { display: none; }
 body.nav-open .nav-toggle .ic-close { display: block; }
 
+/* Dark / light theme toggle (sits next to the hamburger, always visible) */
+.theme-toggle {
+    display: inline-flex;
+    position: relative;
+    z-index: 1001;
+    width: 46px; height: 46px;
+    align-items: center; justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--teal-800);
+    cursor: pointer;
+    transition: background .18s var(--ease), color .18s var(--ease), border-color .18s var(--ease);
+}
+.theme-toggle:hover { background: var(--teal-50); color: var(--teal-700); }
+.theme-toggle .ic { width: 24px; height: 24px; }
+.theme-toggle .ic-sun { display: none; }
+.theme-toggle .ic-moon { display: block; }
+:root[data-theme="dark"] .theme-toggle .ic-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .ic-moon { display: none; }
+
 .nav-backdrop {
     position: fixed; inset: 0;
     background: rgba(9, 40, 33, .45);
@@ -769,3 +790,75 @@ body.nav-open .nav-backdrop { opacity: 1; visibility: visible; }
     *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
     .has-js .reveal { opacity: 1; transform: none; }
 }
+
+/* =========================================================================
+   24) Dark theme
+   ========================================================================= */
+:root[data-theme="dark"] {
+    --ink:       #eaf3ef;
+    --body:      #c3d3cd;
+    --muted:     #93a89f;
+    --line:      #24403a;
+    --line-soft: #1c332d;
+    --bg:        #0c1513;
+    --bg-warm:   #0f1c19;
+    --surface:   #14231f;
+
+    /* accent tints tuned for dark surfaces */
+    --teal-50:  #16332b;
+    --teal-100: #1e463b;
+    --gold-50:  #2b2413;
+    --gold-100: #463c1f;
+
+    --blue-bg:   #17253f;
+    --green-bg:  #102a20;
+    --amber-bg:  #2b2413;
+    --rose-bg:   #341620;
+    --violet-bg: #221c3a;
+    --cyan-bg:   #0f2831;
+
+    --sh-xs: 0 1px 2px rgba(0,0,0,.45);
+    --sh-sm: 0 2px 8px rgba(0,0,0,.5);
+    --sh-md: 0 10px 26px rgba(0,0,0,.55);
+    --sh-lg: 0 22px 50px rgba(0,0,0,.62);
+}
+
+/* smooth transition when switching themes */
+body { transition: background-color .3s var(--ease), color .3s var(--ease); }
+
+/* Header / nav in dark */
+:root[data-theme="dark"] .site-header { background: rgba(15,26,23,.88); }
+:root[data-theme="dark"] .brand-text strong { color: var(--ink); }
+:root[data-theme="dark"] .nav-toggle,
+:root[data-theme="dark"] .theme-toggle { background: var(--surface); color: var(--ink); }
+:root[data-theme="dark"] .theme-toggle:hover { background: var(--teal-50); color: #7fd3bf; }
+:root[data-theme="dark"] .main-nav { background: var(--surface); }
+:root[data-theme="dark"] .main-nav a:hover,
+:root[data-theme="dark"] .main-nav a.active { color: #7fd3bf; background: var(--teal-50); }
+
+/* Accent text that was dark-teal on light surfaces -> brighten in dark */
+:root[data-theme="dark"] a { color: #64c7ab; }
+:root[data-theme="dark"] a:hover { color: #8bd8c2; }
+:root[data-theme="dark"] .stat b,
+:root[data-theme="dark"] .channel .big { color: #57c5a6; }
+:root[data-theme="dark"] .tag,
+:root[data-theme="dark"] .faq-q .q-mark { color: #7fd3bf; }
+:root[data-theme="dark"] .eyebrow { color: var(--gold-400); }
+
+/* Hero side card becomes a dark surface so its text stays legible */
+:root[data-theme="dark"] .hero-card { background: var(--surface); color: var(--ink); }
+
+/* Callouts */
+:root[data-theme="dark"] .callout h4 { color: var(--gold-400); }
+:root[data-theme="dark"] .callout p  { color: var(--body); }
+:root[data-theme="dark"] .callout.teal h4 { color: #7fd3bf; }
+:root[data-theme="dark"] .callout.teal p  { color: var(--body); }
+:root[data-theme="dark"] .callout.rose h4, :root[data-theme="dark"] .callout.rose .ic { color: #ff8ea1; }
+:root[data-theme="dark"] .callout.rose p  { color: #e7b9c1; }
+
+/* Emergency box */
+:root[data-theme="dark"] .emergency { background: linear-gradient(180deg, #26141b, var(--surface)); border-color: #4d2733; }
+:root[data-theme="dark"] .emergency-item { background: var(--surface); border-color: #4d2733; }
+
+/* Exclude items keep readable */
+:root[data-theme="dark"] .exclude-item { background: var(--surface); }

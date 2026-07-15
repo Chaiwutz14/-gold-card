@@ -18,6 +18,8 @@
         icon("shield-check", '<path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><polyline points="9 11.4 11.2 13.6 15.4 9.4"/>'),
         icon("menu", '<line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>'),
         icon("close", '<line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>'),
+        icon("sun", '<circle cx="12" cy="12" r="4.2"/><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.4" y1="5.4" x2="7.1" y2="7.1"/><line x1="16.9" y1="16.9" x2="18.6" y2="18.6"/><line x1="18.6" y1="5.4" x2="16.9" y2="7.1"/><line x1="7.1" y1="16.9" x2="5.4" y2="18.6"/>'),
+        icon("moon", '<path d="M20 14.5A8 8 0 019.5 4a7 7 0 100 16 8 8 0 0010.5-5.5z"/>'),
         icon("chevron-down", '<polyline points="6 9 12 15 18 9"/>'),
         icon("arrow-right", '<line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>'),
         icon("arrow-up", '<line x1="12" y1="20" x2="12" y2="5"/><polyline points="6 11 12 5 18 11"/>'),
@@ -102,6 +104,23 @@
         if (backdrop) backdrop.addEventListener("click", closeNav);
         document.querySelectorAll(".main-nav a").forEach(function (a) { a.addEventListener("click", closeNav); });
         document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeNav(); });
+
+        /* Dark / light theme toggle (initial theme is set by an inline <head> script) */
+        var themeBtn = document.querySelector(".theme-toggle");
+        if (themeBtn) {
+            var syncThemeLabel = function () {
+                var dark = document.documentElement.getAttribute("data-theme") === "dark";
+                themeBtn.setAttribute("aria-pressed", dark ? "true" : "false");
+                themeBtn.setAttribute("aria-label", dark ? "สลับเป็นโหมดสว่าง" : "สลับเป็นโหมดมืด");
+            };
+            syncThemeLabel();
+            themeBtn.addEventListener("click", function () {
+                var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+                document.documentElement.setAttribute("data-theme", next);
+                try { localStorage.setItem("theme", next); } catch (e) {}
+                syncThemeLabel();
+            });
+        }
 
         /* Header shadow */
         var header = document.querySelector(".site-header");
